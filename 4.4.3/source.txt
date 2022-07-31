@@ -1,0 +1,55 @@
+开发范例：从Hello World入门
+这个指南会带领您完整的创建一个简单的扩展。这个扩展会在谷歌浏览器中增加一个按钮。当点击按钮时，显示一个自动生成的页面。这个按钮和页面看起来如下图：
+
+
+创建并加载一个扩展
+在这一节中，将编写一个browser action扩展，这个扩展会在谷歌浏览器的工具栏上增加一个图标。
+
+1.在磁盘上创建一个目录，用来放扩展的代码和资源
+
+2.在这个目录中，创建一个文本文件，命名为manifest.json，其内容为：
+
+{
+  "manifest_version": 2,
+
+  "name": "One-click Kittens",
+  "description": "This extension demonstrates a browser action with kittens.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://secure.flickr.com/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
+3.把这个图标放到目录中：
+
+4.加载扩展
+
+a)点击图标，在菜单中选择工具>扩展程序，这会打开扩展管理的页面
+
+b)如果“开发人员模式”旁边有个“+”号，点击这个“+”号进入开发人员模式。“+”号会变成“-”号，同时会显示更多的按钮和信息
+
+c)点击“载入正在开发的扩展程序…”按钮，会出现一个文件选择对话框
+
+d)在对话框中，找到扩展目录并点击“确定”
+
+如果扩展是正确的，它的图标就会显示在地址栏右侧，扩展的信息也会显示在扩展管理页面上，如下图所示：
+
+
+向扩展中添加代码
+在这一节，会给扩展增加一点功能
+
+1.编辑manifest.json文件，增加下面的内容：
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+在扩展目录中，创建一个名为popup.html的文本文件，增加一些代码：CSS and JavaScript code for hello_world
+
+2.回到扩展管理页面，点击“立即更新扩展程序”按钮，这时会重新加载修改后的扩展
+
+3.点击扩展的图标，会弹出一个气泡窗口，显示popup.html文件的内容。样子如下：
