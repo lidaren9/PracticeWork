@@ -11,7 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar
 *.war
 *.nar
 *.ear
@@ -46,7 +46,7 @@ log/
 .DS_Store
 
 # others
-*.jar
+#*.jar
 *.war
 *.zip
 *.tar
