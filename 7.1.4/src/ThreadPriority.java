@@ -1,6 +1,5 @@
 public class ThreadPriority implements Runnable{
-    // 线程编号
-    int number;
+    int number; // 线程编号
 
     public ThreadPriority(int number) {
         this.number = number;
